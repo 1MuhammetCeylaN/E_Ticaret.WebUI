@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E_Ticaret.WebUI", "E_Ticaret.WebUI\E_Ticaret.WebUI.csproj", "{26E20F27-5DDF-4900-863C-19820D148E80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E_Ticaret.Core", "E_Ticaret.Core\E_Ticaret.Core.csproj", "{7E768727-D82B-421F-A9E3-851E9228A9E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E_Ticaret.Data", "E_Ticaret.Data\E_Ticaret.Data.csproj", "{C8D147BF-9783-4CA6-AFB6-901F01D8622D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E_Ticaret.Service", "E_Ticaret.Service\E_Ticaret.Service.csproj", "{C30052F4-6B54-4E00-B18C-AD102D6591D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26E20F27-5DDF-4900-863C-19820D148E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E20F27-5DDF-4900-863C-19820D148E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E20F27-5DDF-4900-863C-19820D148E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E20F27-5DDF-4900-863C-19820D148E80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E768727-D82B-421F-A9E3-851E9228A9E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E768727-D82B-421F-A9E3-851E9228A9E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E768727-D82B-421F-A9E3-851E9228A9E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E768727-D82B-421F-A9E3-851E9228A9E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8D147BF-9783-4CA6-AFB6-901F01D8622D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8D147BF-9783-4CA6-AFB6-901F01D8622D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8D147BF-9783-4CA6-AFB6-901F01D8622D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8D147BF-9783-4CA6-AFB6-901F01D8622D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C30052F4-6B54-4E00-B18C-AD102D6591D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30052F4-6B54-4E00-B18C-AD102D6591D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C30052F4-6B54-4E00-B18C-AD102D6591D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C30052F4-6B54-4E00-B18C-AD102D6591D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

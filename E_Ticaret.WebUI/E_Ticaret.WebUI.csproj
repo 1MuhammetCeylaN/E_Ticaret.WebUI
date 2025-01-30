@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Iyzipay" Version="2.1.66" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\E_Ticaret.Service\E_Ticaret.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\admin\Data\" />
+    <Folder Include="Areas\admin\Models\" />
+    <Folder Include="wwwroot\Img\Categories\" />
+    <Folder Include="wwwroot\Img\Brands\" />
+    <Folder Include="wwwroot\Img\News\" />
+    <Folder Include="wwwroot\Img\Products\" />
+    <Folder Include="wwwroot\Img\Sliders\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,73 @@
+﻿@* @model IEnumerable<Category>
+
+@{
+    foreach (var anaKategori in Model.Where(i => i.IsActive && i.IsTopMenu && i.ParentId == 0))
+    {
+        var altKategoriler = Model.Where(c => c.ParentId == anaKategori.Id).ToList();
+        if (altKategoriler.Any()) // Eğer alt kategori varsa
+        {
+            <div class="dropdown">
+                <a class="dropdown-toggle nav-link text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    @anaKategori.Name
+                </a>
+                <ul class="dropdown-menu m-auto">
+                    @foreach (var altKategori in altKategoriler)
+                    {
+                        <li>
+                            <a class="dropdown-item" href="/Categories/Index/@altKategori.Id">
+                                @altKategori.Name
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+        else // Eğer alt kategori yoksa
+        {
+            <a class="nav-link text-dark" href="/Categories/Index/@anaKategori.Id">
+                @anaKategori.Name
+            </a>
+        }
+    }
+} *@
+
+@model IEnumerable<Category>
+
+@{
+    foreach (var anaKategori in Model.Where(i => i.IsActive && i.IsTopMenu && i.ParentId == 0))
+    {
+        var altKategoriler = Model.Where(c => c.ParentId == anaKategori.Id).ToList();
+        if (altKategoriler.Any()) // Eğer alt kategori varsa
+        {
+            <div class="dropdown">
+                <a class="dropdown-toggle nav-link text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    @anaKategori.Name
+                </a>
+                <ul class="dropdown-menu m-auto">
+                    @foreach (var altKategori in altKategoriler)
+                    {
+                        <li>
+                            <a class="dropdown-item" href="/Categories/Index/@altKategori.Id">
+                                @altKategori.Name
+                            </a>
+                        </li>
+                    }
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <a class="nav-link text-dark" href="/Categories/AllProducts/@anaKategori.Id">
+                            Tüm @anaKategori.Name 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        }
+        else // Eğer alt kategori yoksa
+        {
+            <a class="nav-link text-dark" href="/Categories/Index/@anaKategori.Id">
+                @anaKategori.Name
+            </a>
+        }
+    }
+}
