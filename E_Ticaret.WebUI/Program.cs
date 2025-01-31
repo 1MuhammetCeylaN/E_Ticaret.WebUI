@@ -2,6 +2,7 @@ using E_Ticaret.Data;
 using E_Ticaret.Service.Abstract;
 using E_Ticaret.Service.Concrete;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace E_Ticaret.WebUI
@@ -25,7 +26,10 @@ namespace E_Ticaret.WebUI
 
             });
 
-            builder.Services.AddDbContext<DatabaseContext>();
+            builder.Services.AddDbContext<DatabaseContext>(options=>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
+            });
 
             builder.Services.AddScoped(typeof(IService<>), typeof(Service<>)); // Her IService isteði yaptýðýmýzda sistem arka tarafta service sýnýfýnýn bir örneðini oluþturup onu sunacak 
 
@@ -65,7 +69,7 @@ namespace E_Ticaret.WebUI
             app.UseAuthentication(); // Bu önce gelmeli önce oturum açma
             app.UseAuthorization();  // sonra yetkilendirme
 
-            app.MapStaticAssets();
+            
 
             app.MapControllerRoute(
             name: "admin",
@@ -73,8 +77,8 @@ namespace E_Ticaret.WebUI
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}")
-                .WithStaticAssets();
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+                
 
             app.Run();
         }

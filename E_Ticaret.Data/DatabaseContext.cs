@@ -12,6 +12,11 @@ namespace E_Ticaret.Data
 {
     public class DatabaseContext : DbContext
     {
+        public DatabaseContext(DbContextOptions options) : base(options)
+        {
+
+        }
+
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Brand> Brands { get; set; }
@@ -25,10 +30,16 @@ namespace E_Ticaret.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=LAPTOP-EMJSQFU7\SQLEXPRESS;Database=EticaretDb;Trusted_Connection=true;TrustServerCertificate=True; ");
-            base.OnConfiguring(optionsBuilder);
+            // Localhost
+            //optionsBuilder.UseSqlServer(@"Server=LAPTOP-EMJSQFU7\SQLEXPRESS;Database=EticaretDb;Trusted_Connection=true;TrustServerCertificate=True; ");
+            // base.OnConfiguring(optionsBuilder);
 
-            optionsBuilder.ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
+
+            // Free Host
+           //optionsBuilder.UseSqlServer(@"workstation id=Eticaret20.mssql.somee.com;packet size=4096;user id=KayaAhmet_SQLLogin_2;pwd=x2mm32q11q;data source=Eticaret20.mssql.somee.com;persist security info=False;initial catalog=Eticaret20;TrustServerCertificate=True");
+            // base.OnConfiguring(optionsBuilder);
+
+           // optionsBuilder.ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
 
         }
 
